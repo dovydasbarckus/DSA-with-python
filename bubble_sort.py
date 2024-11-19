@@ -1,5 +1,9 @@
+import random
+from timed_func import timed_func
+
 # Optimized Bubble sort in Python
 
+@timed_func
 def bubbleSort(array):
 
     # loop through each element of array
@@ -27,10 +31,15 @@ def bubbleSort(array):
         # so no need for further comparison
         if not swapped:
             break
+    return array
 
-data = [-2, 45, 0, 11, -9]
+# data = [-2, 45, 0, 11, -9]
+# bubbleSort(data)
+# print('Sorted Array in Ascending Order:')
+# print(data)
 
-bubbleSort(data)
+data2 = [random.randint(1,100) for i in range(100)]
+print(bubbleSort(data2))
 
-print('Sorted Array in Ascending Order:')
-print(data)
+
+
